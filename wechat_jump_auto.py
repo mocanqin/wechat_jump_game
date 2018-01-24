@@ -21,6 +21,7 @@ import sys
 import time
 import math
 import random
+import subprocess
 from PIL import Image
 from six.moves import input
 try:
@@ -78,7 +79,7 @@ def jump(distance):
         duration=press_time
     )
     print(cmd)
-    os.system(cmd)
+    subprocess.call(cmd, shell=True)
     return press_time
 
 
